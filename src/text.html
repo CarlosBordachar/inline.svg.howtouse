@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="theme-color" content="#1b2735">
+
+<style>
+body {
+    color: #DDEEFF;
+    font: 36px Montserrat;
+    display: grid;
+
+    background: linear-gradient(130deg, #395573, #113546); 
+    background-attachment: fixed;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+hr {
+  width: 90vw;
+}
+
+.icon {
+        /*width: 10em;
+        height: 10em;*/
+        /* display: table-cell; */
+        /* vertical-align: top; */
+}
+</style>
+    </head>
+    <body>
+
+<h1>Stroke over TEXT as SVG</h1>
+
+<svg width="10cm" height="3cm" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g stroke="#99FFAA" font-family="Verdana" font-size="74" >
+    <text x="60" y="180" fill="yellow" >
+      You are
+      <tspan font-weight="bold" fill="red" >not</tspan>
+      a banana.  This is too long to fit in this svg viewBox.
+    </text>
+  </g>
+</svg>
+
+<hr>
+
+<h1>Stroke with TEXT over SVG image</h1>
+
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <path id="MyPath" stroke="lightblue" fill="none"
+	d="M 50,50 C 100,0 200,100 250,50"/>
+  <text fill="red" style="font: 16px sans-serif;">
+    <textPath href="#MyPath">Text on a path. Pero para el caso no se si esto es asi o tal vez no hace nada de nada. lorem it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</textPath>
+  </text>
+</svg>
+
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <text fill="#00FFFF" style="font: 12px sans-serif;">
+    <textPath href="#pathTwitter300">Text on a path. pero para el caso no se si esto es asi o tal vez no hace nada de nada. lorem it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</textPath>
+  </text>
+</svg>
+
+<hr>
+        <h1>Text inside SVG image</h1>
+        <p />
+
+        <!-- DEFINICION DE SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+            <!-- SVG TWITTER -->
+            <symbol id="icon-twitter-72" viewBox="0 0 72 72" aria-labelledby="title-twitter" aria-describedby="desc-twitter">
+                <title id="title-twitter">Twitter</title>
+                <desc id="desc-twitter">Logo de Twitter obtenido de: IcoMoonApp, set Brands.</desc>
+                <!--<a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">-->
+                <path style="fill: var(--color1, #1da1f2)" d="M71.862 13.707c-2.655 1.167-5.49 1.962-8.475 2.325 3.042-1.833 5.382-4.722 6.489-8.169-2.853 1.665-6.015 2.877-9.381 3.552-2.688-2.877-6.519-4.677-10.773-4.677-8.151 0-14.76 6.609-14.76 14.751 0 1.17 0.135 2.295 0.381 3.372-12.27-0.579-23.145-6.471-30.423-15.378-1.281 2.166-1.998 4.683-1.998 7.425 0 5.13 2.61 9.639 6.564 12.288-2.421-0.078-4.698-0.744-6.684-1.848v0.183c0 7.155 5.079 13.122 11.838 14.481-1.239 0.333-2.547 0.513-3.888 0.513-0.942 0-1.845-0.090-2.748-0.258 1.893 5.859 7.335 10.131 13.812 10.251-5.040 3.957-11.427 6.315-18.306 6.315-1.17 0-2.337-0.069-3.51-0.201 6.567 4.182 14.304 6.627 22.671 6.627 27.162 0 41.997-22.488 41.997-41.958 0-0.627 0-1.26-0.045-1.89 2.883-2.067 5.4-4.68 7.38-7.644z">
+                <!-- fill="#1da1f2" style="fill: var(--colorTwitterIcon, #1da1f2)" -->
+                </path>
+                 <text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+                <!-- </a> -->
+            </symbol>
+
+<symbol id="icon-twitter-auto-32" viewBox="0 0 32 32">
+<path fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-twitter-100" viewBox="0 0 100 100">
+<path fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M99.808 19.037c-3.687 1.621-7.625 2.725-11.771 3.229 4.225-2.546 7.475-6.558 9.012-11.346-3.962 2.313-8.354 3.996-13.029 4.933-3.733-3.996-9.054-6.496-14.963-6.496-11.321 0-20.5 9.179-20.5 20.487 0 1.625 0.188 3.187 0.529 4.683-17.042-0.804-32.146-8.987-42.254-21.358-1.779 3.008-2.775 6.504-2.775 10.313 0 7.125 3.625 13.388 9.117 17.067-3.363-0.108-6.525-1.033-9.283-2.567v0.254c0 9.937 7.054 18.225 16.442 20.112-1.721 0.462-3.537 0.713-5.4 0.713-1.308 0-2.562-0.125-3.817-0.358 2.629 8.137 10.187 14.071 19.183 14.238-7 5.496-15.871 8.771-25.425 8.771-1.625 0-3.246-0.096-4.875-0.279 9.121 5.808 19.867 9.204 31.487 9.204 37.725 0 58.329-31.233 58.329-58.275 0-0.871 0-1.75-0.063-2.625 4.004-2.871 7.5-6.5 10.25-10.617z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-twitter-128" viewBox="0 0 128 128">
+<path fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M127.755 24.368c-4.72 2.075-9.76 3.488-15.067 4.133 5.408-3.259 9.568-8.395 11.536-14.523-5.072 2.96-10.693 5.115-16.677 6.315-4.779-5.115-11.589-8.315-19.152-8.315-14.491 0-26.24 11.749-26.24 26.224 0 2.080 0.24 4.080 0.677 5.995-21.813-1.029-41.147-11.504-54.085-27.339-2.277 3.851-3.552 8.325-3.552 13.2 0 9.12 4.64 17.136 11.669 21.845-4.304-0.139-8.352-1.323-11.883-3.285v0.325c0 12.72 9.029 23.328 21.045 25.744-2.203 0.592-4.528 0.912-6.912 0.912-1.675 0-3.28-0.16-4.885-0.459 3.365 10.416 13.040 18.011 24.555 18.224-8.96 7.035-20.315 11.227-32.544 11.227-2.080 0-4.155-0.123-6.24-0.357 11.675 7.435 25.429 11.781 40.304 11.781 48.288 0 74.661-39.979 74.661-74.592 0-1.115 0-2.24-0.080-3.36 5.125-3.675 9.6-8.32 13.12-13.589z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-twitter-150" viewBox="0 0 150 150">
+<path id="pathTwitter150" fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M149.712 28.556c-5.531 2.431-11.438 4.087-17.656 4.844 6.338-3.819 11.213-9.837 13.519-17.019-5.944 3.469-12.531 5.994-19.544 7.4-5.6-5.994-13.581-9.744-22.444-9.744-16.981 0-30.75 13.769-30.75 30.731 0 2.438 0.281 4.781 0.794 7.025-25.563-1.206-48.219-13.481-63.381-32.037-2.669 4.512-4.162 9.756-4.162 15.469 0 10.688 5.438 20.081 13.675 25.6-5.044-0.162-9.787-1.55-13.925-3.85v0.381c0 14.906 10.581 27.338 24.663 30.169-2.581 0.694-5.306 1.069-8.1 1.069-1.962 0-3.844-0.188-5.725-0.537 3.944 12.206 15.281 21.106 28.775 21.356-10.5 8.244-23.806 13.156-38.137 13.156-2.438 0-4.869-0.144-7.313-0.419 13.681 8.712 29.8 13.806 47.231 13.806 56.587 0 87.494-46.85 87.494-87.412 0-1.306 0-2.625-0.094-3.938 6.006-4.306 11.25-9.75 15.375-15.925z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-twitter-200" viewBox="0 0 200 200">
+<path fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M199.617 38.075c-7.375 3.242-15.25 5.45-23.542 6.458 8.45-5.092 14.95-13.117 18.025-22.692-7.925 4.625-16.708 7.992-26.058 9.867-7.467-7.992-18.108-12.992-29.925-12.992-22.642 0-41 18.358-41 40.975 0 3.25 0.375 6.375 1.058 9.367-34.083-1.608-64.292-17.975-84.508-42.717-3.558 6.017-5.55 13.008-5.55 20.625 0 14.25 7.25 26.775 18.233 34.133-6.725-0.217-13.050-2.067-18.567-5.133v0.508c0 19.875 14.108 36.45 32.883 40.225-3.442 0.925-7.075 1.425-10.8 1.425-2.617 0-5.125-0.25-7.633-0.717 5.258 16.275 20.375 28.142 38.367 28.475-14 10.992-31.742 17.542-50.85 17.542-3.25 0-6.492-0.192-9.75-0.558 18.242 11.617 39.733 18.408 62.975 18.408 75.45 0 116.658-62.467 116.658-116.55 0-1.742 0-3.5-0.125-5.25 8.008-5.742 15-13 20.5-21.233z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-twitter-300" viewBox="0 0 300 300">
+<path id="pathTwitter300" fill="#1da1f2" style="fill: var(--color1, #1da1f2)" d="M299.425 57.112c-11.063 4.862-22.875 8.175-35.312 9.688 12.675-7.637 22.425-19.675 27.038-34.037-11.888 6.938-25.063 11.987-39.088 14.8-11.2-11.987-27.163-19.487-44.888-19.487-33.962 0-61.5 27.538-61.5 61.463 0 4.875 0.563 9.563 1.588 14.050-51.125-2.413-96.437-26.962-126.763-64.075-5.338 9.025-8.325 19.513-8.325 30.938 0 21.375 10.875 40.162 27.35 51.2-10.088-0.325-19.575-3.1-27.85-7.7v0.763c0 29.813 21.163 54.675 49.325 60.338-5.162 1.387-10.612 2.138-16.2 2.138-3.925 0-7.688-0.375-11.45-1.075 7.888 24.412 30.563 42.212 57.55 42.713-21 16.487-47.612 26.312-76.275 26.312-4.875 0-9.737-0.287-14.625-0.838 27.362 17.425 59.6 27.613 94.462 27.613 113.175 0 174.988-93.7 174.988-174.825 0-2.612 0-5.25-0.188-7.875 12.013-8.612 22.5-19.5 30.75-31.85z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+
+<symbol id="icon-youtube-150" viewBox="0 0 150 150">
+<path fill="#f00" style="fill: var(--color1, #f00)" d="M146.844 38.781c-1.811-6.344-6.706-11.239-12.917-13.017l-0.133-0.033c-11.688-3.131-58.725-3.131-58.725-3.131s-46.919-0.063-58.725 3.131c-6.344 1.811-11.239 6.706-13.017 12.917l-0.033 0.133c-2.076 10.69-3.264 22.984-3.264 35.555 0 0.255 0 0.51 0.001 0.765l-0-0.039c-0.001 0.175-0.001 0.383-0.001 0.591 0 12.57 1.188 24.863 3.457 36.772l-0.193-1.22c1.811 6.344 6.706 11.239 12.917 13.017l0.133 0.033c11.675 3.138 58.725 3.138 58.725 3.138s46.912 0 58.725-3.138c6.344-1.811 11.239-6.706 13.017-12.917l0.033-0.133c1.991-10.47 3.129-22.513 3.129-34.822 0-0.465-0.002-0.929-0.005-1.394l0 0.071c0.004-0.432 0.005-0.943 0.005-1.454 0-12.311-1.139-24.356-3.318-36.035l0.187 1.208zM60.056 97.506v-44.956l39.15 22.512z"></path>
+<text x="30" y="30" font-size="1em" text-anchor="middle" fill="#000000">Twitter</text> 
+</symbol>
+        </svg>
+
+        
+        <!-- USO DE SVG COMPLETO -->
+        <p /> 072 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-72"></use>
+            </a>
+        </svg>
+        <p /> 032 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-auto-32"></use>
+            </a>
+        </svg>
+        <p /> 100 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-100"></use>
+            </a>
+        </svg>
+        <p /> 128 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-128"></use>
+            </a>
+        </svg>
+        <p /> 150 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-150"></use>
+            </a>
+        </svg>
+        <p /> 200 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-200"></use>
+            </a>
+        </svg>
+        <p /> 300 Twitter
+        <svg class="icon icon-twitter">
+            <a xlink:href="https://twitter.com/NombreUsuario" tabindex="0" role="link">
+                <use xlink:href="#icon-twitter-300"></use>
+            </a>
+        </svg>
+
+    </body>
+</html>

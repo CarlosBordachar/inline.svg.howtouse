@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      display: table;
+      font-family: sans-serif;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    #svgSmile {
+      /*animation: balanceo 2s infinite ease-in-out alternate;*/
+
+	/*-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;*/
+    
+    -webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s infinite both;
+
+	  display: none;
+    }
+
+    @keyframes balanceo {
+      0% {
+        transform: rotateX(30deg) rotateY(5deg);
+      }
+      100% {
+        transform: rotateX(-30deg) rotateY(-10deg);
+      }
+    }
+
+    #svgHeart {
+      width: 100%;
+      height: 100%;
+    -webkit-animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+	  display: none;
+    }
+
+    #svgStar {
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+    -webkit-animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3 alternate both;
+
+	  /*display: none;*/
+    }
+
+
+  
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    /*opacity: 1;*/
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    opacity: 1;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+<svg id="svgSmile" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-happy" width="100" height="100" viewBox="0 0 24 24" stroke-width="0.5" stroke="#673AB7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"  class="heartbeat"/>
+  <circle cx="12" cy="12" r="9" />
+  <line x1="9" y1="9" x2="9.01" y2="9" />
+  <line x1="15" y1="9" x2="15.01" y2="9" />
+  <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+</svg>
+
+<svg id="svgHeart" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#673AB7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M12 20l-7 -7a4 4 0 0 1 6.5 -6a.9 .9 0 0 0 1 0a4 4 0 0 1 6.5 6l-7 7" />
+</svg>
+
+<svg id="svgStar" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#673AB7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
+</svg>
+
+</body>
+</html>
+<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->

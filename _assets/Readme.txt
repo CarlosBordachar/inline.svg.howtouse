@@ -1,0 +1,1 @@
+El *.json puede importarse en icomoon.io y así tener el mismo proyecto con el que se trabajó para seleccionar los logos.

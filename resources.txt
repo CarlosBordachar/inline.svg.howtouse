@@ -1,0 +1,11 @@
+Completisima lista de iconos en SVG para utilizarlos
+ -> https://icomoon.io/app/#/select
+
+Motivos por los cuales utilizar SVG en lugar de Fonts (tipo Font Awesome)
+ -> https://css-tricks.com/icon-fonts-vs-svg/
+
+Tips para definir completo un SVG.  Algo desactualizado ya que trata sobre la v1.1
+ -> https://www.sitepoint.com/tips-accessible-svg/
+
+Distintos Patterns para utilizar como relleno o contorno.
+ -> https://iros.github.io/patternfills/
